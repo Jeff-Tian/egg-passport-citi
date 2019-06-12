@@ -3,6 +3,7 @@ import { Application } from "egg";
 const debug = require("debug")("egg-passport-citi");
 const assert = require("assert");
 const Strategy = require("passport-citi").Strategy;
+const uuid = require("uuid/v4");
 
 export default (app: Application) => {
   const config = app.config.passportCiti;
@@ -24,7 +25,8 @@ export default (app: Application) => {
         ...config,
         appId: config.key,
         appSecret: config.secret,
-        redirectUri: config.callbackURL
+        redirectUri: config.callbackURL,
+        state: uuid()
       },
       (
         req: any,
