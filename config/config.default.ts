@@ -3,5 +3,6 @@
 exports.passportCiti = {
   key: "",
   secret: "",
-  callbackURL: "/passport/citi/callback"
+  callbackURL: "/passport/citi/callback",
+  countryCode: "sg"
 };

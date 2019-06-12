@@ -1,6 +1,6 @@
 {
   "name": "egg-passport-citi",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Citi passport plugin for egg",
   "eggPlugin": {
     "name": "passportCiti",
@@ -17,7 +17,7 @@
   "dependencies": {
     "debug": "^2.6.1",
     "egg-passport": "^2.0.1",
-    "passport-citi": "0.1.2",
+    "passport-citi": "0.2.0",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
