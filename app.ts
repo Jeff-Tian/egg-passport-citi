@@ -45,12 +45,23 @@ export default (app: Application) => {
         });
         const user = {
           provider: "citi",
-          id: profile.emails.emailAddress,
-          name: profile.customerParticulars.names.fullName,
-          displayName: profile.customerParticulars.names.fullName,
+          id:
+            profile.emails && profile.emails ? profile.emails.emailAddress : "",
+          name:
+            profile.customerParticulars && profile.customerParticulars.names
+              ? profile.customerParticulars.names.fullName
+              : "",
+          displayName:
+            profile.customerParticulars && profile.customerParticulars.names
+              ? profile.customerParticulars.names.fullName
+              : "",
           photo: "",
           gender:
-            profile.customerParticulars.prefix === "Mr." ? "male" : "female",
+            profile.customerParticulars && profile.customerParticulars.prefix
+              ? profile.customerParticulars.prefix === "Mr."
+                ? "male"
+                : "female"
+              : "",
           accessToken,
           refreshToken,
           profile
