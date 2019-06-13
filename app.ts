@@ -46,22 +46,19 @@ export default (app: Application) => {
         const user = {
           provider: "citi",
           id:
-            profile.emails && profile.emails ? profile.emails.emailAddress : "",
+            profile.emails && profile.emails
+              ? profile.emails[0].emailAddress
+              : "",
           name:
             profile.customerParticulars && profile.customerParticulars.names
-              ? profile.customerParticulars.names.fullName
+              ? profile.customerParticulars.names[0].fullName
               : "",
           displayName:
             profile.customerParticulars && profile.customerParticulars.names
-              ? profile.customerParticulars.names.fullName
+              ? profile.customerParticulars.names[0].fullName
               : "",
           photo: "",
-          gender:
-            profile.customerParticulars && profile.customerParticulars.prefix
-              ? profile.customerParticulars.prefix === "Mr."
-                ? "male"
-                : "female"
-              : "",
+          gender: profile.gender === "FEMALE" ? "female" : "male",
           accessToken,
           refreshToken,
           profile

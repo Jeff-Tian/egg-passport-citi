@@ -1,6 +1,6 @@
 {
   "name": "egg-passport-citi",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Citi passport plugin for egg",
   "eggPlugin": {
     "name": "passportCiti",
