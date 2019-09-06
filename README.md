@@ -1,4 +1,4 @@
-# egg-passport-cit
+# egg-passport-citi
 
 > Citi passport plugin for egg.
 
@@ -49,6 +49,17 @@ exports.passportCiti = {
 exports.passportCiti = {
   key: "your oauth key",
   secret: "your oauth secret"
+};
+```
+
+## Mount on your app
+
+```typescript
+// {app_root}/app/router.ts
+import { Application } from "egg";
+
+export default (app: Application) => {
+  app.passport.mount("citi", app.config.passportCiti);
 };
 ```
 
