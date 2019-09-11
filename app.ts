@@ -57,7 +57,8 @@ export default (app: Application) => {
             profile.customerParticulars && profile.customerParticulars.names
               ? profile.customerParticulars.names[0].fullName
               : "",
-          photo: "",
+          photo:
+            "https://sandbox.apihub.citi.com/gcb/authCode/resources/images/Citi-Enterprise-White.png",
           gender: profile.gender === "FEMALE" ? "female" : "male",
           accessToken,
           refreshToken,
