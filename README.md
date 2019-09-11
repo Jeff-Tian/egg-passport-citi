@@ -48,7 +48,10 @@ exports.passportCiti = {
 // {app_root}/config/config.default.[t|j]s
 exports.passportCiti = {
   key: "your oauth key",
-  secret: "your oauth secret"
+  secret: "your oauth secret",
+  callbackURL: "/your/callback-or-redirect/url",
+  // state: your customized state function, default to uuid()
+  state: function yourStateFunction(ctx) {}
 };
 ```
 

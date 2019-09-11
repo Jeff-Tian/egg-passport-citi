@@ -8,4 +8,8 @@ module.exports = app => {
   });
 
   app.passport.mount("citi");
+
+  app.passport.verify(async (ctx, user) => {
+    return user;
+  });
 };

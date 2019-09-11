@@ -26,7 +26,7 @@ export default (app: Application) => {
         appId: config.key,
         appSecret: config.secret,
         redirectUri: config.callbackURL,
-        state: uuid()
+        state: typeof config.state === "function" ? config.state(app) : uuid()
       },
       (
         req: any,
