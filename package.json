@@ -17,7 +17,7 @@
   "dependencies": {
     "debug": "^2.6.1",
     "egg-passport": "^2.0.1",
-    "passport-citi": "0.2.2",
+    "passport-citi": "0.2.3",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
