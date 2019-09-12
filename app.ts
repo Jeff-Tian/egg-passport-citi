@@ -18,10 +18,9 @@ export default (app: Application) => {
     "[egg-passport-wechat] config.passportWechat.secret required"
   );
 
-  debug("initiating passport citi: %s", JSON.stringify(config));
+  debug("initiating passport citi: ", config);
 
   const state = typeof config.state === "function" ? config.state(app) : uuid();
-  debug("state = %j", state);
 
   app.passport.use(
     "citi",
