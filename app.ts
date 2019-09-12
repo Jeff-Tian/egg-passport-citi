@@ -18,6 +18,11 @@ export default (app: Application) => {
     "[egg-passport-wechat] config.passportWechat.secret required"
   );
 
+  debug("initiating passport citi: %s", JSON.stringify(config));
+
+  const state = typeof config.state === "function" ? config.state(app) : uuid();
+  debug("state = %j", state);
+
   app.passport.use(
     "citi",
     new Strategy(
@@ -26,7 +31,7 @@ export default (app: Application) => {
         appId: config.key,
         appSecret: config.secret,
         redirectUri: config.callbackURL,
-        state: typeof config.state === "function" ? config.state(app) : uuid()
+        state: state
       },
       (
         req: any,
@@ -36,7 +41,7 @@ export default (app: Application) => {
         expires_in: number,
         verified: any
       ) => {
-        console.log("arguments = ", {
+        debug("arguments = %j", {
           accessToken,
           refreshToken,
           profile,
@@ -67,7 +72,7 @@ export default (app: Application) => {
 
         debug("%s %s get user: %j", req.method, req.url, user);
 
-        console.log("do verifying...", app.passport.doVerify);
+        debug("do verifying... %j", app.passport.doVerify);
         app.passport.doVerify(req, user, verified);
       }
     )

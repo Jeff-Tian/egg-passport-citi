@@ -9,8 +9,11 @@ module.exports = appInfo => {
     key: process.env.EGG_PASSPORT_WECHAT_CLIENT_ID || "xxx",
     secret: process.env.EGG_PASSPORT_WECHAT_CLIENT_SECRET || "yyy",
     state: app => {
+      console.log("calculating state... ", app);
+      app.logger.info("calculating state...");
       return req => {
         const state = "4321";
+        console.log("--------> state = ", state, req.headers, req.url);
         app.logger.info("state = ", {
           state,
           headers: req.headers,
