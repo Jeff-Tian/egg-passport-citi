@@ -40,7 +40,7 @@ describe("test/passport-citi.test.ts", () => {
       .expect(302)
       .expect(
         "Location",
-        /^https:\/\/sandbox\.apihub\.citi\.com\/gcb\/api\/authCode\/oauth2\/authorize\?response_type=code&client_id=/
+        /^https:\/\/sandbox\.apihub\.citi\.com\/gcb\/api\/authCode\/oauth2\/authorize\?response_type=code&client_id=xxx&scope=customers_profiles&countryCode=SG&businessCode=GCB&locale=en_US&state=4321/
       );
   });
 });
