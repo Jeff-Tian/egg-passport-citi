@@ -73,6 +73,8 @@ see [config/config.default.ts](config/config.default.ts) for more detail.
 - http://uniheart.pa-ca.me/passport/citi
 - https://jeff-tian.github.io/me/
 
+![运行截图](https://github.com/Jeff-Tian/me/releases/download/v0.0.3/screenshot.gif)
+
 Testing Accounts:
 
 |   User ID    |  Password  |
