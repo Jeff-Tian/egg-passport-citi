@@ -70,11 +70,18 @@ see [config/config.default.ts](config/config.default.ts) for more detail.
 
 ## Example
 
-<!-- example here -->
+- http://uniheart.pa-ca.me/passport/citi
+- https://jeff-tian.github.io/me/
 
-## Questions & Suggestions
+Testing Accounts:
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+|   User ID    |  Password  |
+| :----------: | :--------: |
+| SandboxUser1 | P@ssUser1$ |
+| SandboxUser2 | P@ssUser2$ |
+| SandboxUser3 | P@ssUser3$ |
+| SandboxUser4 | P@ssUser4$ |
+| SandboxUser5 | P@ssUser5$ |
 
 ## License
 
