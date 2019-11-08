@@ -9,13 +9,10 @@ export default (app: Application) => {
   const config = app.config.passportCiti;
   config.passReqToCallback = true;
 
-  assert(
-    config.key,
-    "[egg-passport-wechat] config.passportWechat.key required"
-  );
+  assert(config.key, "[egg-passport-citi] config.passportCiti.key required");
   assert(
     config.secret,
-    "[egg-passport-wechat] config.passportWechat.secret required"
+    "[egg-passport-citi] config.passportCiti.secret required"
   );
 
   debug("initiating passport citi: ", config);
