@@ -18,13 +18,15 @@
 [download-image]: https://img.shields.io/npm/dm/egg-passport-citi.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-passport-citi
 
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=Jeff-Tian_egg-passport-citi)](https://sonarcloud.io/dashboard?id=Jeff-Tian_egg-passport-citi)
+
 <!--
 Description here.
 -->
 
 ## Example
 
-Open [https://uniheart.herokuapp.com/](https://uniheart.herokuapp.com/) to see the result.
+Open [https://uniheart.herokuapp.com/passport/citi](https://uniheart.herokuapp.com/passport/citi) to see the result.
 
 ## Install
 
@@ -38,7 +40,7 @@ $ npm i egg-passport-citi --save
 // {app_root}/config/plugin.[t|j]s
 exports.passportCiti = {
   enable: true,
-  package: "egg-passport-wechat-ts"
+  package: "egg-passport-citi"
 };
 ```
 
