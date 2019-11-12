@@ -28,6 +28,7 @@ export default (app: Application) => {
         appSecret: config.secret,
         redirectUri: config.callbackURL,
         state: state,
+
         logger: config.logger || app.logger
       },
       (
