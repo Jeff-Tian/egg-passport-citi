@@ -27,7 +27,8 @@ export default (app: Application) => {
         appId: config.key,
         appSecret: config.secret,
         redirectUri: config.callbackURL,
-        state: state
+        state: state,
+        logger: config.logger || app.logger
       },
       (
         req: any,
